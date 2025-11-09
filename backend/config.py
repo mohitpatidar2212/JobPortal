@@ -1,0 +1,5 @@
+SECRET_KEY = "Pa_6eFStwfMZcmUQH_YWCuhwkzfqgSfgkjkkP8DaOP4"
+ALGORITHM = "HS256"
+ACCESS_TOKEN_EXPIRE_MINUTES = 60
+MONGO_URL = "mongodb://localhost:27017"
+DATABASE_NAME = "jobportal"
