@@ -3,7 +3,7 @@ from pydantic import BaseModel, SecretStr
 
 class Settings(BaseModel):
     MAIL_USERNAME: str = "mohitpatidar83054@gmail.com"
-    MAIL_PASSWORD: SecretStr = SecretStr("jkpnqsqhnpudjcuc")
+    MAIL_PASSWORD: SecretStr = SecretStr("yyjquwfbfklgepji")
     MAIL_FROM: str = "mohitpatidar83054@gmail.com"
     MAIL_PORT: int = 587
     MAIL_SERVER: str = "smtp.gmail.com"

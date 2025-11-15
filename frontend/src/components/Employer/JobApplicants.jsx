@@ -45,7 +45,21 @@ export default function MyApplicants() {
 
       <div className="space-y-4 transition-opacity duration-300 min-h-screen">
         {loading ? (
-          <p className="min-h-screen">Loading jobs...</p>
+          <div className="pt-35 flex flex-col items-center justify-center space-y-4">
+            {/* Loader Dots */}
+            <div className="flex space-x-2">
+              <div className="w-2 h-2 bg-gray-700 rounded-full animate-pulse"></div>
+              <div className="w-2 h-2 bg-gray-700 rounded-full animate-pulse [animation-delay:0.15s]"></div>
+              <div className="w-2 h-2 bg-gray-700 rounded-full animate-pulse [animation-delay:0.3s]"></div>
+              <div className="w-2 h-2 bg-gray-700 rounded-full animate-pulse [animation-delay:0.45s]"></div>
+              <div className="w-2 h-2 bg-gray-700 rounded-full animate-pulse [animation-delay:0.6s]"></div>
+            </div>
+
+            {/* Text */}
+            <p className="text-gray-600 text-sm font-medium tracking-wide animate-pulse">
+              Fetching Applicants...
+            </p>
+          </div>
         ): response.length > 0 ? (
           response.map((data) => (
             <div key={data.job_id} className=" mt-5 bg-slate-100 p-5 rounded-2xl w-full">
