@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+motor
+pydantic
+fastapi-mail
+python-jose
+python-multipart
+passlib
+python-dotenv
