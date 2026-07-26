@@ -9,7 +9,7 @@ from mail import conf
 import random
 from bson import ObjectId
 from bson.binary import Binary
-from pydantic import EmailStr, NameEmail
+from pydantic import EmailStr
 from typing import Optional, List
 from .jobs import get_current_user
 from fastapi.responses import StreamingResponse
@@ -100,7 +100,7 @@ async def send_otp(request: OTPRequest):
     
         message = MessageSchema(
             subject="OTP for JobPortal Verification",
-            recipients=[NameEmail(name="User", email=request.email)],  
+            recipients=[request.email],  
             body=template,
             subtype=MessageType.html
             )
@@ -145,7 +145,7 @@ async def send_reset_otp(request: OTPRequest):
     
         message = MessageSchema(
             subject="OTP for reset password - JobPortal",
-            recipients=[NameEmail(name="User", email=request.email)],  
+            recipients=[request.email],  
             body=template,
             subtype=MessageType.html
             )
